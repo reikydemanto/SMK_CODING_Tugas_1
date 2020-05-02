@@ -2,6 +2,7 @@ package com.example.biodatadiri
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +21,8 @@ class Profile : AppCompatActivity() {
         ambilData()
 
         btnEditName.setOnClickListener { navigasiKeEditProfil() }
+
+        btnCall.setOnClickListener { dialPhoneNumber(txtTelp.text.toString()) }
     }
 
     private fun navigasiKeEditProfil() {
@@ -53,5 +56,14 @@ class Profile : AppCompatActivity() {
         txtEmail.text = email
         txtTelp.text = telp
         txtAddress.text = alamat
+    }
+
+    private fun dialPhoneNumber(phoneNumber: String) {
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:$phoneNumber")
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 }
