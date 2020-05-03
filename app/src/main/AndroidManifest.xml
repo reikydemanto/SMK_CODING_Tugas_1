@@ -12,8 +12,8 @@
         <activity android:name=".EditProfile"></activity>
         <activity android:name=".Profile" />
         <activity android:name=".Registrasi" />
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".MainActivity">
+<!--        <activity android:name=".SplashScreen" />-->
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
