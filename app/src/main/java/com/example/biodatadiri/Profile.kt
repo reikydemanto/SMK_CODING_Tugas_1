@@ -51,6 +51,8 @@ class Profile : AppCompatActivity() {
         val email = bundle.getString("email")
         val telp = bundle.getString("telp")
         val alamat = bundle.getString("alamat")
+        val umur = bundle.getString("umur")
+        txtUmur.text = umur
         txtName.text = nama
         txtGender.text = gender
         txtEmail.text = email

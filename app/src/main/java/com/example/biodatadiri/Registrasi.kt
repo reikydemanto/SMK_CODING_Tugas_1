@@ -16,6 +16,7 @@ class Registrasi : AppCompatActivity() {
     private var telpInput : String = ""
     private var alamatInput : String = ""
     private var genderInput : String = ""
+    private var umurInput : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class Registrasi : AppCompatActivity() {
         telpInput = fieldTelp.text.toString()
         alamatInput = fieldAddress.text.toString()
         genderInput = spinnerGender.selectedItem.toString()
+        umurInput = fieldUmur.text.toString()
         when{
             namaInput.isEmpty() -> fieldName.error = "Nama tidak boleh kosong"
             genderInput.equals("Pilih Jenis Kelamin", ignoreCase = true) ->
@@ -39,6 +41,7 @@ class Registrasi : AppCompatActivity() {
             emailInput.isEmpty() -> fieldEmail.error = "Email tidak boleh kosong"
             telpInput.isEmpty() -> fieldTelp.error = "Telp tidak boleh kosong"
             alamatInput.isEmpty() -> fieldAddress.error = "Alamat tidak boleh kosong"
+            umurInput.isEmpty() -> fieldUmur.error = "Umur tidak boleh kosong"
             else -> {
                 tampilToast("Navigasi ke halaman profil")
                 goToProfileActivity()
@@ -67,6 +70,7 @@ class Registrasi : AppCompatActivity() {
         bundle.putString("email", emailInput)
         bundle.putString("telp", telpInput)
         bundle.putString("alamat", alamatInput)
+        bundle.putString("umur",umurInput)
         intent.putExtras(bundle)
 
         startActivity(intent)

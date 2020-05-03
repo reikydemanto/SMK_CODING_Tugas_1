@@ -44,6 +44,14 @@
             android:layout_margin="16dp"/>
 
         <EditText
+            android:id="@+id/fieldUmur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Umur(th)"
+            android:layout_margin="16dp"
+            android:inputType="number"/>
+
+        <EditText
             android:id="@+id/fieldTelp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
