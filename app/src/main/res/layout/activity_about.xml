@@ -15,7 +15,7 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="160dp"
+            android:layout_width="144dp"
             android:layout_height="200dp"
             android:src="@drawable/image_dev"
             android:scaleType="centerCrop"/>

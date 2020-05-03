@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="24dp"
         tools:context=".MainActivity">
 
         <TextView
@@ -19,7 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
             android:fontFamily="sans-serif"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"/>
 
         <EditText
@@ -27,37 +28,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:height="50dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/background_edit_text"/>
 
         <Spinner
             android:id="@+id/spinnerGender"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_margin="16dp"
-            android:entries="@array/jenis_kelamin"/>
+            android:entries="@array/jenis_kelamin"
+            android:background="@drawable/background_edit_text" />
 
         <EditText
             android:id="@+id/fieldEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:layout_margin="16dp"/>
-
-        <EditText
-            android:id="@+id/fieldUmur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Umur(th)"
             android:layout_margin="16dp"
-            android:inputType="number"/>
+            android:height="50dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/background_edit_text"/>
 
-        <EditText
-            android:id="@+id/fieldTelp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Telp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
             android:layout_margin="16dp"
-            android:inputType="phone"/>
+            android:height="50dp"
+            android:background="@drawable/background_edit_text">
+
+            <EditText
+                android:id="@+id/fieldUmur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Umur"
+                android:inputType="number"
+                android:background="@drawable/background_edit_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:height="50dp"
+            android:background="@drawable/background_edit_text">
+
+            <EditText
+                android:id="@+id/fieldTelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telp"
+                android:inputType="phone"
+                android:background="@drawable/background_edit_text"/>
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/fieldAddress"
@@ -65,14 +95,17 @@
             android:layout_height="120dp"
             android:hint="Alamat"
             android:layout_margin="16dp"
-            android:inputType="textMultiLine"/>
+            android:inputType="textMultiLine"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/background_edit_text"/>
 
         <Button
             android:id="@+id/buttonSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SIMPAN"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:background="@drawable/background_button"/>
 
     </LinearLayout>
 
