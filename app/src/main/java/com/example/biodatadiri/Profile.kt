@@ -23,6 +23,14 @@ class Profile : AppCompatActivity() {
         btnEditName.setOnClickListener { navigasiKeEditProfil() }
 
         btnCall.setOnClickListener { dialPhoneNumber(txtTelp.text.toString()) }
+
+        btnAbout.setOnClickListener{ navigasikeAbout() }
+
+    }
+
+    private fun navigasikeAbout() {
+        val intent = Intent(this,About::class.java)
+        startActivity(intent)
     }
 
     private fun navigasiKeEditProfil() {
